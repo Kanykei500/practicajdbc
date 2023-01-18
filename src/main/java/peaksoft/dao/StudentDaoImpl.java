@@ -193,19 +193,21 @@ public class StudentDaoImpl implements StudentDao  {
 
 
 
-//   @Override
-//   // public void addColumnGender(Gender gender) {
-//        String query= """
-//                create type Gender as enum ('Male','Female')
-//                """;
-//       try {
-//           PreparedStatement preparedStatement = connection. prepareStatement(query);
-//           preparedStatement.executeUpdate();
-//
-//
-//       } catch (SQLException e) {
-//           throw new RuntimeException(e);
-//
+   @Override
+   public void addColumnGender(String str) {
+        String query= """
+               
+         alter table students
+         add column gender gender;
+                """;
+           try(Statement statement=connection.createStatement()){
+               statement.executeQuery(query);
+               System.out.println("Successfully added column");
+           } catch (SQLException e) {
+               System.out.println(e.getMessage());
+           }
+       }
+
         // @Override
         //  public Map<Gender, List<Student>> groupByGender() {
         //     return null;

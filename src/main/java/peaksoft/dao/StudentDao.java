@@ -29,7 +29,7 @@ public interface StudentDao {
 
    // Map<Gender,List<Student>>groupByGender();
 
-  //  void addColumnGender(Gender gender);
+   void addColumnGender(String str);
 
     void deleteAllStudents();
     //ddl

@@ -59,11 +59,12 @@ public class StudentServiceImpl implements StudentService{
         return false;
     }
 
-//    @Override
-//    public String addColumnGender(Gender gender) {
-//        return null;
-//    }
-//
+    @Override
+   public String addColumnGender(String str) {
+        studentDao.addColumnGender(str);
+        return "Successfully added ";
+    }
+
 //    @Override
 //    public Map<Gender, List<Student>> groupByGender() {
 //        return null;

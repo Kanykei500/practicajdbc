@@ -26,7 +26,7 @@ public interface StudentService {
 
     boolean checkByAge();
 
-   // String addColumnGender(Gender gender);
+    String addColumnGender(String str);
 
    // Map<Gender,List<Student>> groupByGender();
 
